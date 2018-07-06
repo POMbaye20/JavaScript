@@ -7,7 +7,7 @@
     <title>Exercice</title>
 </head>
 <body>
-    <form method="" action="">
+    <form method="POST" action="post">
         <label>Pseudo</label>
         <input type="text" name="pseudo" id="pseudo" class="focus">
 
@@ -23,7 +23,15 @@
     <script>
         // Exercice : Lorsque vous êtes en focus (= évènement "focus") sur un input, sa bordure devient rouge. Puis lorsque vous êtes en blur (= évènement "blur") sur un input, sa bordure redevient normale. Utilisez addEventListener.
 
+            var input1 = document.querySelector('pseudo');
+            var input2 = document.querySelector('mdp')
 
+            var input1 = pseudo
+
+    document.getElementById('pseudo').focus;
+    input1.onclick = function() {
+        this.style.color = 'red';
+    }
 
     
     </script>
