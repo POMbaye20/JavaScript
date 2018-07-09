@@ -23,28 +23,20 @@
     <script>
         // Exercice : Lorsque vous êtes en focus (= évènement "focus") sur un input, sa bordure devient rouge. Puis lorsque vous êtes en blur (= évènement "blur") sur un input, sa bordure redevient normale. Utilisez addEventListener.
 
-            var input1 = document.querySelector('pseudo');
-            var input2 = document.querySelector('mdp')
+// Correction avec une boucle for : 
+        var inputs = document.querySelectorAll('.focus');
 
-            var input1 = pseudo
+        for (var i=0; i < inputs.length; i++) {     
+        inputs[i].addEventListener('focus', function() {
+        this.style.border = '1px solid red';
+        });
 
-    document.getElementById('pseudo').onfocus;
-    input1.onclick = function() {
-        this.style.borderColor = 'red';
-    }
+        inputs[i].addEventListener('blur', function() {
+        this.style.border = '';
+        });
 
-    document.getElementById('mdp').focus;
-    input1.addEventListener('click', onclick);
-    input2.onclick = function() {
-        this.style.borderColor = 'red';
-    }
+    } 
 
-    var input2 = mdp
-
-    document.getElementById('mdp').focus;
-    input2.onclick = function() {
-        this.style.borderColor = 'red';
-    }
 
 
 
