@@ -85,11 +85,44 @@ Implémentez le JavaScript de cette galerie d'images :
 var images = document.querySelectorAll('.thumbnail'); 
 	for (var i=1; i < images.length; i++) {     
         images[i].addEventListener('click', function() {
-        this.style.toggle('.selected');
+        this.style.border('.selected');
         });
 }
 
 document.querySelector('.thumbnail').innerHTML = 'Jura';
+
+placard = {
+    cereales: {
+        corn_flakes: 1,
+        frosties: 2
+    },
+    barres: {
+        snickers: 5,
+        mars: 6
+    },
+    pates: {
+        tagliatelle: 2,
+        spaghetti: 5
+    }
+};
+
+if (placard.cereales.rice_krispies) {
+    console.log("A");
+} else if (placard.cereales.corn_flakes > placard.cereales.frosties) {
+    console.log("B");
+} else {
+    if (placard.cereales.corn_flakes && (placard.barres.snickers || placard.barres.mars)) {
+        console.log("C");
+    } else {
+        console.log("D");
+    }
+}
+
+if (!(placard.barres.snickers <= placard.pates.spaghetti)) {
+    console.log("E");
+} else if (placard.barres.snickers === placard.pates.spaghetti) {
+    console.log("F");
+}
 
 </script>
 </body>
