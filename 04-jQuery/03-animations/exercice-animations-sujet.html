@@ -54,34 +54,40 @@
 	</div>	
 <script>
 
-	// Exercice 1
+	// Exercice 1 :
 	$(function(){
 
 		 $('.fondu').click(function(){
 		$('img').eq(1).fadeToggle(1000);
-		
 	});
 	
-	// Exercice 2 
+	// Exercice 2 : 
 
-	$(document).scroll(function(){
+	/*$(document).on('scroll',)(function(){
 		$('.left').animate({left : '600px'})
 		$('.right').animate({ right : '600px'});
 
 	});
+	*/
 
-	// Exercice 3 
+	// Correction, autre façon de faire
+	$(document).on('scroll', function(){
+		$('.left').animate({ left : '550px'},1000);
+		$('.right').animate({right : '550px'}, 1000);
+	});
+
+	// Exercice 3 : 
 
 	function anim() {
 		
 			$('#annonce').animate({ left : '1200px'}, {duration : 5000, easing : 'linear'})
 						.animate({ left : '0px'}, 0, anim);
 
-	}
+	}	//fin anim
 	$('#anim').click(anim);
 
 
-	});
+	});	// fin du document ready
 	
 </script>
 
